@@ -6,7 +6,7 @@
         $sql = 'SELECT version();';
         $stmt = $db->prepare($sql);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC); 
         echo "成功";
         var_dump($result);
     } catch (PDOException $e) {
