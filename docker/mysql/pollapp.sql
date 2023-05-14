@@ -1,16 +1,16 @@
 --
--- Database: pollapp
+-- Database: poll_db
 --
--- DROP DATABASE pollapp;
-CREATE DATABASE IF NOT EXISTS pollapp DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE pollapp;
+-- DROP DATABASE poll_db;
+CREATE DATABASE IF NOT EXISTS poll_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE poll_db;
 
 /* ユーザーに権限の付与 */
 CREATE USER IF NOT EXISTS 'test_user'@'localhost' IDENTIFIED BY 'pwd';
-GRANT ALL ON pollapp.* TO 'test_user'@'localhost';
+GRANT ALL ON poll_db.* TO 'test_user'@'localhost';
 
 --
--- Database: `pollapp`
+-- Database: `poll_db`
 --
 
 --
@@ -24,7 +24,7 @@ CREATE TABLE `comments` (
   `body` varchar(100) DEFAULT NULL COMMENT '本文',
   `user_id` varchar(10) NOT NULL COMMENT '作成したユーザーID',
   `del_flg` int(1) NOT NULL DEFAULT '0' COMMENT '削除フラグ(1: 削除、0: 有効)',
-  `updated_by` varchar(20) NOT NULL DEFAULT 'pollapp' COMMENT '最終更新者',
+  `updated_by` varchar(20) NOT NULL DEFAULT 'poll_db' COMMENT '最終更新者',
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最終更新日時'
 );
 
@@ -41,7 +41,7 @@ CREATE TABLE `topics` (
   `dislikes` int(10) NOT NULL DEFAULT '0' COMMENT '反対数',
   `user_id` varchar(10) NOT NULL COMMENT '作成したユーザーID',
   `del_flg` int(1) NOT NULL DEFAULT '0' COMMENT '削除フラグ(1: 削除、0: 有効)',
-  `updated_by` varchar(20) NOT NULL DEFAULT 'pollapp' COMMENT '最終更新者',
+  `updated_by` varchar(20) NOT NULL DEFAULT 'poll_db' COMMENT '最終更新者',
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最終更新日時'
 );
 
@@ -54,7 +54,7 @@ CREATE TABLE `users` (
   `pwd` varchar(60) NOT NULL COMMENT 'パスワード',
   `nickname` varchar(10) NOT NULL COMMENT '画面表示用名',
   `del_flg` int(1) NOT NULL DEFAULT '0' COMMENT '削除フラグ(1: 削除、0: 有効)',
-  `updated_by` varchar(20) NOT NULL DEFAULT 'pollapp' COMMENT '最終更新者',
+  `updated_by` varchar(20) NOT NULL DEFAULT 'poll_db' COMMENT '最終更新者',
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最終更新日時'
 );
 
