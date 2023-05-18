@@ -22,6 +22,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/mysql/init_db/pollapp.sql:/docker-entrypoint-initdb.d/
     ports:
       - "3301:3306"
     environment:
