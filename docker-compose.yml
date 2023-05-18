@@ -1,9 +1,9 @@
-version: '3'
+version: '3.8'
 
 services:
 #アプリ
-  app:
-    container_name: web_dev_app
+  poll_app:
+    container_name: poll_app
     build:
       context: ./docker/php
       dockerfile: Dockerfile
@@ -12,21 +12,23 @@ services:
     ports:
       - "8081:80"
     depends_on:
-      - db
+      - poll_db
 
 # DB
-  db:
-    container_name: web_dev_db
+  poll_db:
+    container_name: poll_db
     build:
       context: ./docker/mysql
       dockerfile: Dockerfile
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/mysql/init_db/pollapp.sql:/docker-entrypoint-initdb.d/
     ports:
       - "3301:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: web_dev_db
+      MYSQL_DATABASE: poll_db
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       TZ: Asia/Tokyos
