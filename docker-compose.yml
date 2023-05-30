@@ -9,7 +9,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./app:/var/www/html
-      - ./docker/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
     ports:
       - "8081:80"
     depends_on:
@@ -24,7 +24,7 @@ services:
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./docker/mysql/init_db/pollapp.sql:/docker-entrypoint-initdb.d/
+      - ./docker/mysql/init_db:/docker-entrypoint-initdb.d
     ports:
       - "3301:3306"
     environment:
