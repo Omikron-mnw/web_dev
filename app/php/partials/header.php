@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace partials;
 
 use lib\Auth;
