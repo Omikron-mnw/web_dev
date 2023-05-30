@@ -12,6 +12,9 @@ RUN apt-get update \
         vim \
     && docker-php-ext-install pdo_mysql mysqli
 
+RUN pecl install xdebug && \
+    docker-php-ext-enable xdebug
+
 COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 
 WORKDIR /var/www/html
