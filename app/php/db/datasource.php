@@ -29,8 +29,8 @@ class DataSource {
     private $sqlResult;
     public const CLS = 'cls';
 
-    public function __construct($host = 'localhost', $port = '8889', $dbName = 'pollapp', $username = 'test_user', $password = 'pwd') {
-        
+    public function __construct($host = 'poll_db', $port = '3306', $dbName = 'poll_db', $username = 'user', $password = 'password') {
+
         $dsn = "mysql:host={$host};port={$port};dbname={$dbName};";
         $this->conn = PDOSingleton::getInstance($dsn, $username, $password);
 

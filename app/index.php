@@ -2,6 +2,8 @@
 
 require_once 'config.php';
 
+// var_dump(SOURCE_BASE);
+
 // Library
 require_once SOURCE_BASE . 'libs/helper.php';
 require_once SOURCE_BASE . 'libs/auth.php';

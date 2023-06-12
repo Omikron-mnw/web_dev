@@ -17,7 +17,7 @@ app_in: ## アプリコンテナに入る
 	docker-compose exec poll_app bash
 .PHONY: app_in
 
-db_in: ## DBコンテナに入るs
+db_in: ## DBコンテナに入る
 	docker-compose exec web_dev_app bash
 .PHONY: db_in
 

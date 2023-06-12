@@ -28,6 +28,7 @@ class TopicQuery
     public static function fetchPublishedTopics()
     {
 
+        // $dns = mysqli_connect('local_host', 'user', 'password', 'poll_db');
         $db = new DataSource;
         $sql = '
         select 
