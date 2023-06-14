@@ -32,6 +32,7 @@ function header() {
                             <a href="<?php the_url('topic/archive'); ?>" class="mr-2">過去の投稿</a>
                             <a href="<?php the_url('logout'); ?>">ログアウト</a>
                         <?php else: ?>
+                            <?php //var_dump(BASE_CONTEXT_PATH); ?>
                             <a href="<?php the_url('register'); ?>" class="btn btn-primary mr-2">登録</a>
                             <a href="<?php the_url('login'); ?>">ログイン</a>
                         <?php endif; ?>

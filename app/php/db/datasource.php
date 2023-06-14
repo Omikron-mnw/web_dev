@@ -4,6 +4,7 @@ namespace db;
 use PDO;
 
 class PDOSingleton {
+    private $conn;
     private static $singleton;
 
     private function __construct($dsn, $username, $password)
@@ -53,7 +54,7 @@ class DataSource {
     }
 
     public function execute($sql = "", $params = []) {
-        
+
         $this->executeSql($sql, $params);
         return  $this->sqlResult;
 
