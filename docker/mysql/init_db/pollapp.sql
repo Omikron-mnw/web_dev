@@ -6,8 +6,8 @@ CREATE DATABASE IF NOT EXISTS poll_db DEFAULT CHARACTER SET utf8mb4 COLLATE utf8
 USE poll_db;
 
 /* ユーザーに権限の付与 */
-CREATE USER IF NOT EXISTS 'test_user'@'localhost' IDENTIFIED BY 'pwd';
-GRANT ALL ON poll_db.* TO 'test_user'@'localhost';
+CREATE USER IF NOT EXISTS 'user'@'poll_db' IDENTIFIED BY 'password';
+GRANT ALL ON poll_db.* TO 'user'@'poll_db';
 
 --
 -- Database: `poll_db`
