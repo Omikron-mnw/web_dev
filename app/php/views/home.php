@@ -1,5 +1,7 @@
-<?php 
+<?php
 namespace view\home;
+
+// var_dump($_SERVER);
 
 function index($topics) {
     $topics = escape($topics);
