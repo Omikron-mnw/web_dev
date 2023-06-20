@@ -25,7 +25,7 @@ function redirect($path)
     die();
 }
 
-function the_url($path)
+function the_url($path = null)
 {
     echo get_url($path);
 }
@@ -52,7 +52,7 @@ function escape($data)
 
         return $data;
     } elseif (is_object($data)) {
-        
+
         foreach ($data as $prop => $val) {
             $data->$prop = escape($val);
         }
@@ -61,6 +61,6 @@ function escape($data)
     } else {
 
         return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
-        
+
     }
 }
