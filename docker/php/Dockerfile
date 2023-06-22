@@ -10,7 +10,8 @@ RUN apt-get update \
         wget \
         rsync \
         vim \
-    && docker-php-ext-install pdo_mysql mysqli
+    && docker-php-ext-install pdo_mysql mysqli \
+    && a2enmod rewrite
 
 RUN pecl install xdebug && \
     docker-php-ext-enable xdebug
