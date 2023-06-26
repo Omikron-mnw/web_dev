@@ -10,6 +10,7 @@ RUN apt-get update \
         wget \
         rsync \
         vim \
+        less \
     && docker-php-ext-install pdo_mysql mysqli \
     && a2enmod rewrite
 
