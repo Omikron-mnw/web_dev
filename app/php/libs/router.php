@@ -6,10 +6,13 @@ use Error;
 
 function route($rpath, $method) {
     try {
+        var_dump($rpath);
 
         if($rpath === '') {
             $rpath = 'home';
         }
+
+        var_dump($rpath);
 
         $targetFile = SOURCE_BASE . "controllers/{$rpath}.php";
 

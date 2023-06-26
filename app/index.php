@@ -50,6 +50,7 @@ try {
     $rpath = str_replace(BASE_CONTEXT_PATH, '', $url['path']);
     $method = strtolower($_SERVER['REQUEST_METHOD']);
 
+    var_dump($rpath);
     route($rpath, $method);
 
     \partials\footer();

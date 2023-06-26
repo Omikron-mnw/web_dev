@@ -3,14 +3,18 @@
 # AllowOverride All
 # Options +FollowSymLinks
 
+# Alias /poll "/Users/hrykmnw/Docker/web_dev/app/"
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# RewriteBase /
 # RewriteCond %{REQUEST_URI} !^/poll
 # RewriteRule .? /poll/ [R,L]
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
 
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ /poll/$1 [L]
-# RewriteRule ^(.*)$ /poll/$1/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
 </IfModule>
