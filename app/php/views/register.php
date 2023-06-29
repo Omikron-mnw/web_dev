@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace view\register;
 
 function index() {

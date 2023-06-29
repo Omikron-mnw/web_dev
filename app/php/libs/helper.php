@@ -32,6 +32,9 @@ function the_url($path = null)
 
 function get_url($path)
 {
+    // var_dump(BASE_CONTEXT_PATH);
+    // var_dump(SOURCE_BASE . trim($path, '/'));
+    // var_dump(trim($path, '/'));
 
     return BASE_CONTEXT_PATH . trim($path, '/');
 }

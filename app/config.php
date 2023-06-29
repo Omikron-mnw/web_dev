@@ -3,9 +3,10 @@ define('CURRENT_URI', $_SERVER['REQUEST_URI']);
 // var_dump($match);
 // var_dump(CURRENT_URI);
 if(preg_match("/(.*)/", CURRENT_URI, $match)) {
-    define('BASE_CONTEXT_PATH', $match[0]);
-    // define('BASE_CONTEXT_PATH', '/');
+    define('BASE_CONTEXT_PATH', $match[0] . '');
+    // define('BASE_CONTEXT_PATH', '/poll');
 }
+// var_dump(BASE_CONTEXT_PATH);
 
 define('BASE_IMAGE_PATH', BASE_CONTEXT_PATH . 'images/');
 define('BASE_JS_PATH', BASE_CONTEXT_PATH . 'js/');

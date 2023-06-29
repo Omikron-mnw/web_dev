@@ -38,6 +38,7 @@ function header() {
                                 // var_dump(__DIR__);
                                 // var_dump(CURRENT_URI);
                                 // the_url('register');
+                                the_url('/');
                             ?>
                             <a href="<?php the_url('register'); ?>" class="btn btn-primary mr-2">登録</a>
                             <a href="<?php the_url('login'); ?>">ログイン</a>
