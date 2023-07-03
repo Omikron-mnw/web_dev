@@ -16,7 +16,8 @@ RewriteRule .? /poll/ [R,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^ index.php [L]
-RewriteRule . poll/$1/index.php [L]
+# RewriteRule ^(.*)$ index.php/$1 [L]
+# RewriteRule ^(.*)$ poll/$1/index.php [L]
+RewriteRule ^(.*)$ poll/index.php [L]
 
 </IfModule>

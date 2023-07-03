@@ -48,6 +48,10 @@ try {
 
     $url = parse_url(CURRENT_URI);
     $rpath = str_replace(BASE_CONTEXT_PATH, '', $url['path']);
+    var_dump(CURRENT_URI);
+    var_dump($url);
+    var_dump(BASE_CONTEXT_PATH);
+    // $rpath = str_replace('/poll/', '', $url['path']);
     $method = strtolower($_SERVER['REQUEST_METHOD']);
 
     // var_dump($url);
