@@ -7,13 +7,12 @@ use model\UserModel;
 
 function get() {
 
-    
     \view\login\index();
 
 }
 
 function post() {
-    
+
     $id = get_param('id', '');
     $pwd = get_param('pwd', '');
 
