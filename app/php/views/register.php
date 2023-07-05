@@ -27,7 +27,8 @@ function index() {
             </div>
             <div class="d-flex align-items-center justify-content-between">
                 <div>
-                    <a href="<?php the_url('login'); ?>">ログインへ</a>
+                    <!-- <a href="<?php the_url('login'); ?>">ログインへ</a> -->
+                    <a href="/poll/login">ログインへ</a>
                 </div>
                 <div>
                     <input type="submit" value="登録" class="btn btn-primary shadow-sm">
