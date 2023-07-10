@@ -11,7 +11,8 @@ function redirect($path)
 
     if ($path === GO_HOME) {
 
-        $path = get_url('');
+        // $path = get_url('');
+        $path = '/poll/';
     } else if ($path === GO_REFERER) {
 
         $path = $_SERVER['HTTP_REFERER'];
