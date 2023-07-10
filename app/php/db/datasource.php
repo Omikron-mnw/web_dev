@@ -42,8 +42,10 @@ class DataSource {
         $stmt = $this->executeSql($sql, $params);
 
         if($type === static::CLS) {
+            // var_dump($stmt->fetchAll(PDO::FETCH_CLASS, $cls));
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS, $cls);
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+            // return $stmt->fetchAll(PDO::FETCH_CLASS, $cls);
 
         } else {
 

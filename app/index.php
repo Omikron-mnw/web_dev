@@ -56,7 +56,7 @@ try {
 
     // var_dump($url);
     // var_dump(BASE_CONTEXT_PATH);
-    var_dump($rpath, $method);
+    // var_dump($rpath, $method);
     route($rpath, $method);
 
     \partials\footer();

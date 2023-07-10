@@ -42,6 +42,7 @@ function header() {
                                 // var_dump(CURRENT_URI);
                                 // the_url('register');
                                 // the_url('login');
+                                // var_dump(BASE_CSS_PATH);
                             ?>
                             <!-- <a href="<?php the_url('register'); ?>" class="btn btn-primary mr-2">登録</a> -->
                             <!-- <a href="<?php the_url('login'); ?>">ログイン</a> -->

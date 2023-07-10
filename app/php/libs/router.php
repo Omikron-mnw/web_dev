@@ -16,7 +16,7 @@ function route($rpath, $method) {
         var_dump($rpath);
 
         $targetFile = SOURCE_BASE . "controllers/{$rpath}.php";
-        var_dump($targetFile);
+        // var_dump($targetFile);
         // var_dump($_SERVER['REQUEST_URI']);
 
         if(!file_exists($targetFile)) {
@@ -29,8 +29,8 @@ function route($rpath, $method) {
         $rpath = str_replace('/', '\\', $rpath);
         $fn = "\\controller\\{$rpath}\\{$method}";
 
-        var_dump($rpath);
-        var_dump($fn);
+        // var_dump($rpath);
+        // var_dump($fn);
 
         $fn();
 
