@@ -15,12 +15,19 @@ function redirect($path)
         $path = '/poll/';
     } else if ($path === GO_REFERER) {
 
+
         $path = $_SERVER['HTTP_REFERER'];
     } else {
 
         $path = get_url($path);
+        // $path = '/poll/topic/archive';
+        // $path = SOURCE_BASE . $path;
     }
+    // var_dump($path);
+    // var_dump(SOURCE_BASE);
+    $source_base = SOURCE_BASE;
 
+    // header("Location: {$source_base}{$path}");
     header("Location: {$path}");
 
     die();

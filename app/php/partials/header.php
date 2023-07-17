@@ -28,9 +28,9 @@ function header() {
                     <div class="col-md-auto">
                         <?php if(Auth::isLogin()) : ?>
                             <?php // ログインしているとき ?>
-                            <!-- <a href="<?php the_url('topic/create'); ?>" class="btn btn-primary mr-2">投稿</a>
-                            <a href="<?php the_url('topic/archive'); ?>" class="mr-2">過去の投稿</a>
-                            <a href="<?php the_url('logout'); ?>">ログアウト</a> -->
+                            <!-- <a href="<?php //the_url('topic/create'); ?>" class="btn btn-primary mr-2">投稿</a>
+                            <a href="<?php //the_url('topic/archive'); ?>" class="mr-2">過去の投稿</a>
+                            <a href="<?php //the_url('logout'); ?>">ログアウト</a> -->
                             <a href="/poll/topic/create" class="btn btn-primary mr-2">投稿</a>
                             <a href="/poll/topic/archive" class="mr-2">過去の投稿</a>
                             <a href="/poll/logout">ログアウト</a>
@@ -44,8 +44,8 @@ function header() {
                                 // the_url('login');
                                 // var_dump(BASE_CSS_PATH);
                             ?>
-                            <!-- <a href="<?php the_url('register'); ?>" class="btn btn-primary mr-2">登録</a> -->
-                            <!-- <a href="<?php the_url('login'); ?>">ログイン</a> -->
+                            <!-- <a href="<?php //the_url('register'); ?>" class="btn btn-primary mr-2">登録</a> -->
+                            <!-- <a href="<?php //the_url('login'); ?>">ログイン</a> -->
                             <a href="/poll/register" class="btn btn-primary mr-2">登録</a>
                             <a href="/poll/login">ログイン</a>
                         <?php endif; ?>

@@ -2,6 +2,7 @@
 define('CURRENT_URI', $_SERVER['REQUEST_URI']);
 // var_dump($match);
 // var_dump(CURRENT_URI);
+// var_dump($_SERVER['HTTP_REFERER']);
 if(preg_match("/(.*)/", CURRENT_URI, $match)) {
     define('BASE_CONTEXT_PATH', $match[0] . '');
     // define('BASE_CONTEXT_PATH', '/poll');

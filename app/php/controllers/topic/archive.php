@@ -16,7 +16,7 @@ function get() {
 
     if($topics === false) {
         Msg::push(Msg::ERROR, 'ログインしてください。');
-        redirect('login');
+        redirect('/poll/login');
     }
 
     if(count($topics) > 0) {
@@ -24,5 +24,5 @@ function get() {
     } else {
         echo '<div class="alert alert-primary">トピックを投稿してみよう。</div>';
     }
-    
+
 }
