@@ -11,8 +11,8 @@ function redirect($path)
 
     if ($path === GO_HOME) {
 
-        // $path = get_url('');
-        $path = '/poll/';
+        $path = get_url('home');
+        // $path = '/poll/';
     } else if ($path === GO_REFERER) {
 
 
@@ -28,7 +28,8 @@ function redirect($path)
     $source_base = SOURCE_BASE;
 
     // header("Location: {$source_base}{$path}");
-    header("Location: {$path}");
+    // header("Location: {$path}");
+    redirect($path);
 
     die();
 }
@@ -44,7 +45,8 @@ function get_url($path)
     // var_dump(SOURCE_BASE . trim($path, '/'));
     // var_dump(trim($path, '/'));
 
-    return BASE_CONTEXT_PATH . trim($path, '/');
+    // return BASE_CONTEXT_PATH . trim($path, '/');
+    return '/poll/' . trim($path, '/');
 }
 
 function is_alnum($val)
