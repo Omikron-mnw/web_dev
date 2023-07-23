@@ -20,7 +20,11 @@ function post() {
 
         $user = UserModel::getSession();
         Msg::push(Msg::INFO, "{$user->nickname}さん、ようこそ。");
-        redirect(GO_HOME);
+        header( "HTTP/1.1 301 Moved Permanently" );
+        header("Location: /poll/");
+        // redirect(GO_HOME);
+        // redirect('/');
+        exit();
 
     } else {
 

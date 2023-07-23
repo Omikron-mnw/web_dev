@@ -16,6 +16,9 @@ define('BASE_IMAGE_PATH', '/poll/images/');
 define('BASE_JS_PATH', '/poll/js/');
 define('BASE_CSS_PATH', '/poll/css/');
 define('SOURCE_BASE', __DIR__ . '/php/');
+define('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT']);
+define('HTTP_HOST', $_SERVER['HTTP_HOST']);
+// var_dump(SOURCE_BASE);
 
 define('GO_HOME', 'home');
 define('GO_REFERER', 'referer');

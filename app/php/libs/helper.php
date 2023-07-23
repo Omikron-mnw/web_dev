@@ -11,8 +11,14 @@ function redirect($path)
 
     if ($path === GO_HOME) {
 
-        $path = get_url('home');
-        // $path = '/poll/';
+        // $path = get_url('');
+        $path = '/';
+        // $path = '/var/www/html/php/home.php';
+        // header( "HTTP/1.1 301 Moved Permanently" );
+        // header("Location: /poll/");
+
+        // die();
+
     } else if ($path === GO_REFERER) {
 
 
@@ -23,13 +29,16 @@ function redirect($path)
         // $path = '/poll/topic/archive';
         // $path = SOURCE_BASE . $path;
     }
+    // var_dump($_SERVER);
     // var_dump($path);
     // var_dump(SOURCE_BASE);
-    $source_base = SOURCE_BASE;
+    // $source_base = SOURCE_BASE;
 
+    // $path = HTTP_HOST . $path;
     // header("Location: {$source_base}{$path}");
-    // header("Location: {$path}");
-    redirect($path);
+    header( "HTTP/1.1 301 Moved Permanently" );
+    header("Location: {$path}");
+    // redirect($path);
 
     die();
 }
