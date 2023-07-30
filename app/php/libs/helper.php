@@ -12,7 +12,7 @@ function redirect($path)
     if ($path === GO_HOME) {
 
         // $path = get_url('');
-        $path = '/';
+        $path = '/poll/';
         // $path = '/var/www/html/php/home.php';
         // header( "HTTP/1.1 301 Moved Permanently" );
         // header("Location: /poll/");
@@ -36,11 +36,11 @@ function redirect($path)
 
     // $path = HTTP_HOST . $path;
     // header("Location: {$source_base}{$path}");
-    header( "HTTP/1.1 301 Moved Permanently" );
-    header("Location: {$path}");
-    // redirect($path);
+    // header( "HTTP/1.1 301 Moved Permanently" );
+    header("Location: {$path}", );
+    exit();
 
-    die();
+    // die();
 }
 
 function the_url($path = null)

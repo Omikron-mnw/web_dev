@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace controller\login;
 
 use lib\Auth;
@@ -20,8 +20,8 @@ function post() {
 
         $user = UserModel::getSession();
         Msg::push(Msg::INFO, "{$user->nickname}さん、ようこそ。");
-        header( "HTTP/1.1 301 Moved Permanently" );
-        header("Location: /poll/");
+        // header( "HTTP/1.1 301 Moved Permanently" );
+        header("Location: /poll/", true, 301);
         // redirect(GO_HOME);
         // redirect('/');
         exit();
