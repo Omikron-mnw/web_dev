@@ -1,8 +1,9 @@
 <?php
-
+// header("Location: https://www.yahoo.co.jp/", true, 301);
 require_once 'config.php';
 
 // var_dump(SOURCE_BASE);
+// var_dump($_SERVER);
 
 // Library
 require_once SOURCE_BASE . 'libs/helper.php';
