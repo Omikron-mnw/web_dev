@@ -1,5 +1,5 @@
 <?php
-// header("Location: https://www.yahoo.co.jp/", true, 301);
+
 require_once 'config.php';
 
 // var_dump(SOURCE_BASE);
@@ -45,6 +45,8 @@ session_start();
 
 try {
 
+    // header("Location: https://www.yahoo.co.jp/", true, 301);
+    //////////* このheaderがあるため、リダイレクトが効かないことがわかった *//////////
     \partials\header();
 
     $url = parse_url(CURRENT_URI);
